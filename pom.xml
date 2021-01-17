@@ -250,14 +250,13 @@
                         </goals>
                         <configuration>
                             <executable>docker</executable>
-                            <workingDirectory>${project.basedir}</workingDirectory>
                             <arguments>
                                 <argument>login</argument>
                                 <argument>-u</argument>
                                 <argument>${env.DOCKER_NAME}</argument>
                                 <argument>-p</argument>
                                 <argument>${env.DOCKER_PASSWORD}</argument>
-                                <argument>docker.io/ngomalalibo/authservice</argument>
+                                <argument>registry-1.docker.io</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -272,7 +271,7 @@
                             <!--                            <workingDirectory>${project.basedir}</workingDirectory>-->
                             <arguments>
                                 <argument>push</argument>
-                                <argument>ngomalalibo/authservice</argument>
+                                <argument>ngomalalibo/authservice:latest</argument>
                             </arguments>
                         </configuration>
                     </execution>
