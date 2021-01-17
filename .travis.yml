@@ -18,7 +18,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
     application: stocktrading_authservice
-    deployment_group: stocktrading_group
+    deployment_group: confauth_group
     region: eu-central-1
     on:
       branch: master
@@ -28,7 +28,7 @@ branches:
 env:
   global:
 before_install:
-  - mvn clean install
+  - mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true
   - sudo apt update && apt upgrade
   - sudo apt install wget
   - wget https://aws-codedeploy-eu-central-1.s3.amazonaws.com/latest/install
