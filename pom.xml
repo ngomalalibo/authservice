@@ -244,7 +244,7 @@
                     <!-- Login and Push the image to a docker repo. -->
 
                     <execution>
-                        <id>docker-llogout</id>
+                        <id>docker-logout</id>
                         <phase>install</phase>
                         <goals>
                             <goal>exec</goal>
@@ -275,11 +275,6 @@
                             </arguments>
                         </configuration>
                     </execution>
-
-
-
-
-
                     <execution>
                         <id>docker-push</id>
                         <phase>install</phase>
@@ -290,6 +285,7 @@
                             <executable>docker</executable>
                             <!--                            <workingDirectory>${project.basedir}</workingDirectory>-->
                             <arguments>
+                                <argument>sudo</argument>
                                 <argument>push</argument>
                                 <argument>ngomalalibo/authservice:latest</argument>
                             </arguments>
