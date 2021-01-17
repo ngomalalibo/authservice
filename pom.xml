@@ -269,7 +269,7 @@
                         </goals>
                         <configuration>
                             <executable>docker</executable>
-                            <workingDirectory>${project.basedir}</workingDirectory>
+                            <!--                            <workingDirectory>${project.basedir}</workingDirectory>-->
                             <arguments>
                                 <argument>push</argument>
                                 <argument>ngomalalibo/authservice</argument>
