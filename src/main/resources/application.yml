@@ -1,0 +1,35 @@
+spring:
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: ${ZIPKIN_URI}
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: true
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: ${EUREKA_URI}
+logging:
+  level: warn
+server:
+  port: 8901
+
+security:
+  oauth2:
+    authorization:
+      check-token-access: isAuthenticated()
+    client:
+      client-id: stocktrading
+      client-secret: thisissecret
+    resource:
+      user-info-uri: ${AUTH_URI}
+
+signing:
+  key: 345345fsdgsf5345
