@@ -243,19 +243,19 @@
 
                     <!-- Login and Push the image to a docker repo. -->
 
-                    <execution>
-                        <id>docker-logout</id>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>docker</executable>
-                            <arguments>
-                                <argument>logout</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
+<!--                    <execution>-->
+                    <!--                        <id>docker-logout</id>-->
+                    <!--                        <phase>install</phase>-->
+                    <!--                        <goals>-->
+                    <!--                            <goal>exec</goal>-->
+                    <!--                        </goals>-->
+                    <!--                        <configuration>-->
+                    <!--                            <executable>docker</executable>-->
+                    <!--                            <arguments>-->
+                    <!--                                <argument>logout</argument>-->
+                    <!--                            </arguments>-->
+                    <!--                        </configuration>-->
+                    <!--                    </execution>-->
 
                     <execution>
                         <id>docker-login</id>
