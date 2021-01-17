@@ -242,6 +242,21 @@
                     </execution>
 
                     <!-- Login and Push the image to a docker repo. -->
+
+                    <execution>
+                        <id>docker-llogout</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>docker</executable>
+                            <arguments>
+                                <argument>logout</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
                     <execution>
                         <id>docker-login</id>
                         <phase>install</phase>
@@ -260,6 +275,11 @@
                             </arguments>
                         </configuration>
                     </execution>
+
+
+
+
+
                     <execution>
                         <id>docker-push</id>
                         <phase>install</phase>
