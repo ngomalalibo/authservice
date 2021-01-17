@@ -1,55 +1,42 @@
 language: java
 jdk:
-  - openjdk11
+- openjdk11
 cache:
   directories:
-    - "$HOME/.m2"
+  - "$HOME/.m2"
 sudo: required
 services:
-  - docker
+- docker
 notifications:
   email:
-    - ngomalalibo@gmail.com
+  - ngomalalibo@gmail.com
   on_success: always
   on_failure: always
-#deploy:
-#  - provider: codedeploy
-#    wait-until-deployed: true
-#    access_key_id: $AWS_ACCESS_KEY
-#    secret_access_key: $AWS_SECRET_KEY
-#    application: stocktrading_customer
-#    deployment_group: stocktrading_group
-#    region: eu-central-1
-#    on:
-#      branch: master
-#branches:
-#  only:
-#    - master
 env:
   global:
+  - secure: fKFkGAXAE4xIq3O8tTnkyTjFaSVwm5llSXfYnnT1PASADQ9GkldXfZLQ4pvgwL1YxrX4XvipOb7hxqt466Wze9yvWp/5lcDJQW0sCgAqvA9NE05RYxnN3oxwfpZvvNO9dtCZYVDb+wIfmD1mVKqeLzbhlSjKlfSaKUWwMRUQ4SY3x/6ECZRvkUNrhbmtcprg/KHiKNHInXX4sIdr6bIgjMjXTTQOqXO5OKJeBFbxheZO81HGrRHD6bdUy1mCpvmQHaocfd1jGTOLpQwa3JGI9naFzpVdzj2C46vQptGu3NrBXoDaJ/na0Ct1RTtRUOJ2wDGXX2WVj3WYFYDhKOOjIbJWIADii9I2lK7gLTkayt28rgIFEp+WQgaZYlM5/yi5o7s/QjZUhsPgNWhb39mg3FUmGx0cZd5OC7/lgstL0DEm7QjLwgbBkzAlEUfVDOJpJRSHcJMFiycR/lgHPTJ6EI593MSxnHE/mLVi5MSoBUQrtFy7SScs9/RGC4mi01VWwERc11Isp++keagtwqCa82749K4Ww/y6T/+1xBqMbVgxmi/I0sB3AKGwgetnYDGZqoUUwk1zh0EdGOAUKroPbCk33RsDdtbbSTuDWXmJoxaZDZo3LePQXWo664BWbJzClSOjG+5T9rzghc0DAW3VcgMgFwBwXuBRbBGv5xyuVO8=
+  - secure: Li0PaNO2LfYLVXr4AUn5y/1iX98zvjZneuUNvk0NGFZqVz4cSjWfbXgYYAVI0aLcuOFa1aag+29+kkQ1EO6WqvCpJcD9qpn4V6NWI+1+nFpFLu7lAKGSSkXR2XrcFOmUjUUNs7Es7jFHy1u9UXWoEy2kmaJtovWynitYCHE6jek1OG4P3rbs1i+TmIAkGo3o54Y9BWU8HbeoShYIj1YqKhxN2FcAGg7rQ4TCiLgUe3f+Ze4NUlytYTKfDdUml0CSZvSrQ3Rz5WF84ugv31nr7veVvWmo4cJCAptH9QPrZ3tsQiM4IFmWW9iKMlaq12V4uLhliEAzqcaHXTRNh2uzN9GjzMZHGCUO+YDOnVvZsao8UxiqmN0/0fwnpc1+FNxya5vYYe5oqtP66GWR7tobLsD36DwGHcE2FK+lQ5+07aMjwoDYVvNSKj1UYfXs12xg99RoSLPbfk+SojN0Ai+rdYT8jA14lOXi6sikVCvtBqxmtdUPE4f1TYjApXj7KqFaoMRWVa51Ag/duRX7FE7NK/oV0q0o2lsORtr/71zd7nn5H0TSHiygS2oUKe+Zg1KLwGI727b4Ffw+/wwDEYb87TCVTJQzcu1lWFz+ANlTK+26/aGbtWqnhVvjX7/bR22Hp3cW4pHYXbtiCMzll2IXfmaY8uOVUgpYE9sxFY5O+40=
+  - secure: dMQllg4uUD6NqVLz+NK3rbFI7JiDn5lWLduDExwb/NihjHKcAsfhWeYoBXBr7AqaeOKUU+YxtMT9jpzgJ5joSzuYxagxjDA+1KI9rRFc9Z6+iZly/WCgvOZObLd9K3RuuKGy/I4gijhmF+lCWPViSbuypUYEx4ehE45sri4ZmCMQsqJJTYU7OebgBZTEIGRKM3BsYc77Zp472l9vWDKYTQhSHMd/SudP5ccgfbJYJMPRFMveoHiUMWJD5pF/gqH09SVkeqVebxJr9cIl104hbo4tcMgnLY4eARzW0K/3JIqNXlLrQ29rWgkUkEzF9a0O67/u0icH7pNdDc+uJmx3OW9up7xH2mG1FTuy5HWB23CdxaNa0sSXUud44xpiH1XoKAeF1O3X3dCZQz8LImc1ocqoFC4CPzkLHnRJSfOvROemiPGrEQMXsSv5S7itGQ7DcAJvgU/yRXdYuDSyvImWVXzIuhcimESppkYRegm3ORToViFyQoqB1MKyUNYRUn40qsyQOiJCpFxrZcWScFZp9jelUBTmIPt27MssVmVxu5xiW8aQaBLVBJfuKclkEZo4QTw+KpK/S6Z8cVhiTF7oZdvVhSpgOJ+dbneZ+KBUeNF1IT41CULFRr/MzYi905fq1x4el5Z6IMaNm+HYNjhbs8VYYIuxdDrYxrqojstaEwQ=
+  - secure: nzxokWVXzVb8Kjgb50i4g918rFYB0iGmu3iI/4WM1lyFm3gSrd6xRkyAlgb8pmwSe1H1MHMk7bU4BrDRVBOrrggjjYdyA1lYedGhFmuzHtr4XR3lcwU4X4NVC3iQOOHnM07nAXPVChcvyhVlySn67xIYHbWOtmP9MAeLPrwQzyV+aSD7R7pQSkco/+iEc1uHUlJK0/JCEeh3Ad6oEft20i8+jTnNXHRC6R6vlPVkMZi4HvxG5EYcUZsZpLfk2G204bX6nBVbI2XikPET6q5KfbwaOKJImGrq0/gxekqxzvizi1b9YeMGCT0DUi0nEOcrqOo+4wa8f6Q74QYSuQ2WWpaG/eV+UpfT2XDaWrqvWxmEVnAzoRLGEnYqScsCBq1n9otBGBMiualWn4xerRu7/hyd9Xqe1aAK+2wqDjmwg3cMO7zvfOZD40wKyE3zqV2PHzwWzqH1dylbk7M6TYDHlHM3kIjJxqRy5LLoK8vIdfGq18b76WRBleeIDJassDuMoQHGKH+jyCOHMMlRKCE0uIeYNsmGdIPWcZ/AvSF1whykpZM7XCa6YkodhFr/3CDftIBuXcL3Ol3QrS65nq6ffMUUTCD7/HxBbqrijclO0euqM/cdRuLD8k4VYo9EB+WZmauLUnzD7h/3plTrpSBq5Lv20hfzvvj8WtV8Kmk2mQE=
+  - secure: WLYyuaZIIZ2xmNXoPX9C0l0OF5NovO/+eAIJRm2j/ZhdjnHez/k/WmV8UqKkkNOslE54yuRciPt8/x+O3cMa4BEWVt2GSNsfnYjp/LG5Kt9SuH672NILs2VqW2ECHK68Ex7bqcf5iuLaqT0VGI4tcEpatlfMeZRhHXPkMf8G8NV6YQpi6g/mtkFZLq93dQaAvSwYsAp0LApScVpeJqqB2O9EUG3iCxHFDDBNcc5Gwuo1QMCcsrg6N/UPsjrU6BPDcUt1rZvgxtNnfpqNigE8PUWp19CkpWs80TcM3oefTm+XYOcOFikKzkAf4rM99Nz2U7e9hhaeyT+bT/eElMZutfhXQlKtTiZ0+pcK/XdjYoKzSdAjeqKarKCcQv90ZvaPjwC+qKmnIMn4T/3lU38+y5yrPd4MokMsPN+JOwx7H4CXjffhPUQlF5p5sJLkAjDiKSrZvsY0fItemEs7FKeARupe6SQe3EE20F2bMcEwm9Ry18LJs+jJIgcmRZw+g5ZqkRHApy7Mk5i2o8JBxjsnE/oarks6I7dhU5DklK6S9PNz+XcvTxb5UrQXl6Mr+ZQWJYAR8HFs2Gvr//RfpqaGvxzD0/VA1jEcDdNIoXaOT3NXU0eGO72q8+m/sfSGqlq/etVF4PrZKi3EdfXKMjykDYCDvN7dgngtfVbAEIFha8Y=
 before_install:
-  - mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true
-  - sudo apt-get update
-  - gem install travis
-  - sudo apt-get install -o Dpkg::Options::="--force-confold" --force-yes -y docker-engine
-  - sudo rm /usr/local/bin/docker-compose
-  - curl -L https://github.com/docker/compose/releases/download/1.27.4/docker-compose-`uname -s`-`uname -m` > docker-compose
-  - chmod +x docker-compose
-  - sudo mv docker-compose /usr/local/bin
-  - docker-compose --version
-  - export BUILD_NAME=microservice-master-$(date -u "+%Y%m%d%H%M%S")
-  - export CONTAINER_IP=3.121.40.225
-
+- mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true
+- sudo apt-get update
+- gem install travis
+- sudo apt-get install -o Dpkg::Options::="--force-confold" --force-yes -y docker-engine
+- sudo rm /usr/local/bin/docker-compose
+- curl -L https://github.com/docker/compose/releases/download/1.27.4/docker-compose-`uname
+  -s`-`uname -m` > docker-compose
+- chmod +x docker-compose
+- sudo mv docker-compose /usr/local/bin
+- docker-compose --version
+- export BUILD_NAME=microservice-master-$(date -u "+%Y%m%d%H%M%S")
+- export CONTAINER_IP=3.121.40.225
 script:
-  - sh travis_scripts/tag_build.sh
-  - echo "Launching $BUILD_NAME IN AMAZON ECS"
-  - scp -i all-stock-key-pair.pem ./docker-compose.yml ubuntu@ec2-3-121-40-225.eu-central-1.compute.amazonaws.com:.
-  - docker container rm -f $(docker container ls -aq)
-  - docker image rm -f $(docker image ls -aq)
-  - docker-compose up -d
-  - docker-compose ps -a
-
-  #  =================================================================
-  #  - sh travis_scripts/build_services.sh
-  #  - sh travis_scripts/deploy_to_docker_hub.sh
-#  - sh travis_scripts/deploy_to_amazon_ecs.sh
+- sh travis_scripts/tag_build.sh
+- echo "Launching $BUILD_NAME IN AMAZON ECS"
+- scp -i all-stock-key-pair.pem ./docker-compose.yml ubuntu@ec2-3-121-40-225.eu-central-1.compute.amazonaws.com:.
+- docker container rm -f $(docker container ls -aq)
+- docker image rm -f $(docker image ls -aq)
+- docker-compose up -d
+- docker-compose ps -a
