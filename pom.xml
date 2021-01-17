@@ -236,7 +236,7 @@
                             <arguments>
                                 <argument>tag</argument>
                                 <argument>authservice</argument>
-                                <argument>ngomalalibo/authservice:latest</argument>
+                                <argument>ngomalalibo/authservice</argument>
                             </arguments>
                         </configuration>
                     </execution>

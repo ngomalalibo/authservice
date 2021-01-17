@@ -21,12 +21,12 @@ env:
     - secure: WLYyuaZIIZ2xmNXoPX9C0l0OF5NovO/+eAIJRm2j/ZhdjnHez/k/WmV8UqKkkNOslE54yuRciPt8/x+O3cMa4BEWVt2GSNsfnYjp/LG5Kt9SuH672NILs2VqW2ECHK68Ex7bqcf5iuLaqT0VGI4tcEpatlfMeZRhHXPkMf8G8NV6YQpi6g/mtkFZLq93dQaAvSwYsAp0LApScVpeJqqB2O9EUG3iCxHFDDBNcc5Gwuo1QMCcsrg6N/UPsjrU6BPDcUt1rZvgxtNnfpqNigE8PUWp19CkpWs80TcM3oefTm+XYOcOFikKzkAf4rM99Nz2U7e9hhaeyT+bT/eElMZutfhXQlKtTiZ0+pcK/XdjYoKzSdAjeqKarKCcQv90ZvaPjwC+qKmnIMn4T/3lU38+y5yrPd4MokMsPN+JOwx7H4CXjffhPUQlF5p5sJLkAjDiKSrZvsY0fItemEs7FKeARupe6SQe3EE20F2bMcEwm9Ry18LJs+jJIgcmRZw+g5ZqkRHApy7Mk5i2o8JBxjsnE/oarks6I7dhU5DklK6S9PNz+XcvTxb5UrQXl6Mr+ZQWJYAR8HFs2Gvr//RfpqaGvxzD0/VA1jEcDdNIoXaOT3NXU0eGO72q8+m/sfSGqlq/etVF4PrZKi3EdfXKMjykDYCDvN7dgngtfVbAEIFha8Y=
 before_install:
   - sudo apt-get update
+  - sudo apt-get remove docker docker-engine docker.io containerd runc
   - gem install travis
   - sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
   - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   - sudo apt-key fingerprint 0EBFCD88
   - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-  - sudo apt-get update
   - sudo apt-get install docker-ce docker-ce-cli containerd.io
   - sudo rm /usr/local/bin/docker-compose
   - curl -L https://github.com/docker/compose/releases/download/1.27.4/docker-compose-`uname -s`-`uname -m` > docker-compose
