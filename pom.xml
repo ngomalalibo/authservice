@@ -271,7 +271,6 @@
                             <executable>docker</executable>
                             <workingDirectory>${project.basedir}</workingDirectory>
                             <arguments>
-                                <argument>docker</argument>
                                 <argument>push</argument>
                                 <argument>ngomalalibo/authservice:latest</argument>
                             </arguments>
