@@ -242,21 +242,6 @@
                     </execution>
 
                     <!-- Login and Push the image to a docker repo. -->
-
-                    <!--                    <execution>-->
-                    <!--                        <id>docker-logout</id>-->
-                    <!--                        <phase>install</phase>-->
-                    <!--                        <goals>-->
-                    <!--                            <goal>exec</goal>-->
-                    <!--                        </goals>-->
-                    <!--                        <configuration>-->
-                    <!--                            <executable>docker</executable>-->
-                    <!--                            <arguments>-->
-                    <!--                                <argument>logout</argument>-->
-                    <!--                            </arguments>-->
-                    <!--                        </configuration>-->
-                    <!--                    </execution>-->
-
                     <execution>
                         <id>docker-login</id>
                         <phase>install</phase>
@@ -265,6 +250,7 @@
                         </goals>
                         <configuration>
                             <executable>docker</executable>
+                            <workingDirectory>${project.basedir}</workingDirectory>
                             <arguments>
                                 <argument>login</argument>
                                 <argument>-u</argument>
@@ -283,9 +269,8 @@
                         </goals>
                         <configuration>
                             <executable>docker</executable>
-                            <!--                            <workingDirectory>${project.basedir}</workingDirectory>-->
+                            <workingDirectory>${project.basedir}</workingDirectory>
                             <arguments>
-                                <argument>sudo</argument>
                                 <argument>docker</argument>
                                 <argument>push</argument>
                                 <argument>ngomalalibo/authservice:latest</argument>
