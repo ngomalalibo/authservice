@@ -22,8 +22,6 @@ env:
 addons:
   ssh_known_hosts: ec2-3-121-40-225.eu-central-1.compute.amazonaws.com
 before_install:
-  - docker container rm -f $(docker container ls -aq)
-  - docker image rm -f $(docker image ls -aq)
   - mvn clean install
   - chmod +x mvnw
   - export BUILD_NAME=authservice-master-$(date -u "+%Y%m%d%H%M%S")
