@@ -272,7 +272,7 @@
                             <workingDirectory>${project.basedir}</workingDirectory>
                             <arguments>
                                 <argument>push</argument>
-                                <argument>ngomalalibo/authservice:latest</argument>
+                                <argument>ngomalalibo/authservice</argument>
                             </arguments>
                         </configuration>
                     </execution>
