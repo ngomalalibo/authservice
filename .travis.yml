@@ -30,8 +30,8 @@ script:
 #  - sh travis_scripts/launch_build.sh
 before_deploy:
   - eval "$(ssh-agent -s)"
-  - chmod 600 deploy_rsa
-  - ssh-add deploy_rsa
+  - chmod 600 deploy_rsa.enc
+  - ssh-add deploy_rsa.enc
 deploy:
   provider: script
   skip_cleanup: true
