@@ -34,7 +34,7 @@ before_install:
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
   - mvn clean install
-  - export BUILD_NAME=microservice-master-$(date -u "+%Y%m%d%H%M%S")
+  - export BUILD_NAME=authservice-master-$(date -u "+%Y%m%d%H%M%S")
   - export CONTAINER_IP=3.121.40.225
   - chmod +x mvnw
 script:
