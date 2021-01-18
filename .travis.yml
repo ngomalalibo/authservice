@@ -40,3 +40,5 @@ before_install:
 script:
   - sh travis_scripts/tag_build.sh
   - sh travis_scripts/launch_build.sh
+addons:
+  ssh_known_hosts: 3.121.40.225
