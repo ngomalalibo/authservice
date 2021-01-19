@@ -28,13 +28,13 @@ before_install:
 script:
   - sh travis_scripts/tag_build.sh
 #  - sh travis_scripts/launch_build.sh
-before_deploy:
-  - eval "$(ssh-agent -s)"
-  - chmod 600 deploy_rsa.enc
-  - ssh-add deploy_rsa.enc
+#before_deploy:
+#  - eval "$(ssh-agent -s)"
+#  - chmod 600 deploy_rsa.enc
+#  - ssh-add deploy_rsa.enc
 deploy:
   provider: script
   skip_cleanup: true
-  script: ssh ubuntu@ec2-3-121-40-225.eu-central-1.compute.amazonaws.com 'bash travis_scripts/launch_build.sh'
+  script: ssh -i "all-stock-key-pair.pem" ubuntu@ec2-3-121-40-225.eu-central-1.compute.amazonaws.com 'bash travis_scripts/launch_build.sh'
   on:
     branch: master
