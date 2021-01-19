@@ -25,6 +25,7 @@ before_install:
   - mvn clean install
   - chmod +x mvnw
   - export BUILD_NAME=authservice-master-$(date -u "+%Y%m%d%H%M%S")
+  - scp -i all-stock-key-pair.pem docker-compose.yml ubuntu@ec2-3-121-40-225.eu-central-1.compute.amazonaws.com:.
 script:
   - sh travis_scripts/tag_build.sh
 #  - sh travis_scripts/launch_build.sh
