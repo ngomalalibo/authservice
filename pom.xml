@@ -224,7 +224,7 @@
                     </execution>-->
 
                     <!--Tag image-->
-                    <execution>
+                    <!--<execution>
                         <id>docker-tag</id>
                         <phase>install</phase>
                         <goals>
@@ -239,10 +239,10 @@
                                 <argument>ngomalalibo/authservice:latest</argument>
                             </arguments>
                         </configuration>
-                    </execution>
+                    </execution>-->
 
                     <!-- Login and Push the image to a docker repo. -->
-                    <execution>
+                    <!--<execution>
                         <id>docker-login</id>
                         <phase>install</phase>
                         <goals>
@@ -260,8 +260,8 @@
                                 <argument>docker.io</argument>
                             </arguments>
                         </configuration>
-                    </execution>
-                    <execution>
+                    </execution>-->
+                    <!--<execution>
                         <id>docker-push</id>
                         <phase>install</phase>
                         <goals>
@@ -275,7 +275,7 @@
                                 <argument>ngomalalibo/authservice</argument>
                             </arguments>
                         </configuration>
-                    </execution>
+                    </execution>-->
                 </executions>
             </plugin>
         </plugins>
