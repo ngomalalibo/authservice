@@ -5,8 +5,6 @@ target/
 !**/src/test/**/target/
 
 ### added by Ngo Alalibo
-*.pem
-*.ppk
 *.txt
 *.JPG
 *.pdf
