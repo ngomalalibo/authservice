@@ -235,8 +235,8 @@
                             <workingDirectory>${project.basedir}</workingDirectory>
                             <arguments>
                                 <argument>tag</argument>
-                                <argument>authservice</argument>
                                 <argument>ngomalalibo/authservice</argument>
+                                <argument>ngomalalibo/authservice:latest</argument>
                             </arguments>
                         </configuration>
                     </execution>
