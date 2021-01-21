@@ -1,5 +1,6 @@
 sudo chmod 600 all-stock-key-pair.pem
 sudo chmod 755 ~/
+echo "Copying files to AWS instance"
 scp -i all-stock-key-pair.pem docker-compose.yml ubuntu@ec2-3-121-40-225.eu-central-1.compute.amazonaws.com:.
 scp -i all-stock-key-pair.pem travis_scripts/launch_build.sh ubuntu@ec2-3-121-40-225.eu-central-1.compute.amazonaws.com:.
 echo "Tagging build with $BUILD_NAME"
