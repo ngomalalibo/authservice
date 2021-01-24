@@ -10,6 +10,7 @@ target/
 *.pdf
 *.csv
 *.enc
+*.env
 
 ### STS ###
 .apt_generated
